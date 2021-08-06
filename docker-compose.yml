@@ -7,7 +7,5 @@ services:
     volumes:
       - .:/usr/app/
       - /usr/app/node_modules
-    expose:
-      - "3000"
     ports:
-      - "4000:3000"
+      - 3000:3000
