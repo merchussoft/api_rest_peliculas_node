@@ -10,5 +10,6 @@ exports.generos = async (req, res) => {
         'adicional': 'order by nombre asc'
     });
 
+    res.header('content-type', 'application/json; charset=utf-8')
     res.json(result);
 }

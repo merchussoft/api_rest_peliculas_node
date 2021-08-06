@@ -12,7 +12,7 @@ const app = express();
 
 
 //Settings
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT_PELICULAS || 3000);
 
 
 // Midleware
