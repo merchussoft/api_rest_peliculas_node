@@ -1,0 +1,12 @@
+version: "3"
+services:
+  node_peliculas:
+    build: .
+    restart: always
+    volumes:
+      - .:/usr/app/
+      - /usr/app/node_modules
+    expose:
+      - "3000"
+    ports:
+      - "4000:3000"
