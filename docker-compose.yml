@@ -2,6 +2,7 @@ version: "3"
 services:
   node_peliculas:
     build: .
+    command: npm start
     restart: always
     volumes:
       - .:/usr/app/
