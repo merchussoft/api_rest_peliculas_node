@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:15.14.0
 
 WORKDIR /app
 
@@ -10,6 +10,6 @@ COPY . .
 
 EXPOSE 3000
 
-#CMD ['npm', 'start']
+CMD ["npm", "start"]
 
-ENTRYPOINT ['node', 'src/peliculas.js']
+#ENTRYPOINT ["node", "src/peliculas.js"]
