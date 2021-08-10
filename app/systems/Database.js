@@ -24,11 +24,11 @@ const mysql2 = require('mysql2');
 const {promisify} = require('util');
 
 const conexion = mysql2.createPool({
-   host: '168.61.208.82',
-   user: 'root',
-   password: 'Cuervo2019',
-   database: 'peliculas',
-   port: 2250
+   host: process.env.DB_HOST,
+   user: process.env.DB_USER,
+   password: process.env.DB_PASS,
+   database: process.env.DB_NAME,
+   port: process.env.DB_PORT
 });
 
 conexion.getConnection((error, connection) => {
@@ -55,6 +55,9 @@ conexion.getConnection((error, connection) => {
    return connection;
 });
 
-conexion.query = promisify(conexion.query);
-module.exports = conexion;
+// conexion.query = promisify(conexion.query);
+const promisePool = conexion.promise();
+
+module.exports = promisePool;
+// module.exports = conexion;
 

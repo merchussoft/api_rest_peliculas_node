@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor{
+width: 300px;
+}
+
+#contenedor h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+form {
+    /*width: 400px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+
+}
+form div {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 20px 0;
+}
+
+#titulo_pelicula {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+}
+
+#titulo_pelicula label,
+#file_image label,
+#file_video label,
+#sinopsis label,
+#genero label{
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+#titulo_pelicula input, #sinopsis textarea, #genero select{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#adjuntar {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
